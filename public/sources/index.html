@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Celina Hotel</title>
+        <link rel="shortcut icon" type="img/png" href="img/shortcut_icon.png">
+	<link rel="stylesheet" title="style" type="text/css" href="style.css">
+        <script>
+            // Declare variable slideIndex as current slide
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("slide-items");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                // move to next slide
+                slideIndex++;
+                // if cursor is in final slide, move to first slide
+                if (slideIndex == slides.length) {
+                    slideIndex = 0
+                }
+                slides[slideIndex].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-top">
+                <div class="container-header-top">
+                    <div class="top-menu">
+                        <ul>
+                            <a href="signup.php"><li class="top-menu-items">Đăng ký</li></a>
+                            <a href="login.php"><li class="top-menu-items">Đăng nhập</li></a>
+                        </ul>
+                    </div>
+                    <div class="top-banner">
+                        <div id="top-logo">
+                            <a href="index.html"><img src="img/logo1.png" height="100px"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="container-header-bottom">
+                    <div class="bottom-menu">
+                        <ul>
+                            <li class="bottom-menu-items"><a href="index.html"><img src="img/home.png" height="18px"/></a></li>
+                            <li class="bottom-menu-items"><a href="">GIỚI THIỆU</a></li>
+                            <li class="bottom-menu-items"><a href="">DỊCH VỤ</a></li>
+                            <li class="bottom-menu-items"><a href="">THANH TOÁN</a></li>
+                            <li class="bottom-menu-items"><a href="">LIÊN HỆ</a></li>
+                            <li class="bottom-menu-items"><a href="">TRỢ GIÚP</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BODY -->
+        <div class="main">
+            <div class="container-main-content">
+                <div class="advertisement">
+                    <div class="slides" class="fade">
+                        <div class="slide-items">
+                            <img src="img/slides/slide1.jpg"/>
+                        </div>
+                        <div class="slide-items" class="fade">
+                            <img src="img/slides/slide2.jpg"/>
+                        </div>
+                        <div class="slide-items">
+                            <img src="img/slides/slide3.jpg"/>
+                        </div>
+                    </div>
+                    <div class="change-slides">
+                        <span class="dot" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                    </div>
+                </div>
+                <div class="main-content">
+                    Chào mừng bạn đến với khách sạn Celina!
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="wrapper">
+                <div class="col">
+                    <h4 class="col-title">TRANG CHỦ</h4>
+                    <div id="bottom-logo"><img src="img/logo2.png" height="140px"/></div>
+                </div>
+                <div class="col">
+                    <h4 class="col-title">CÁC CHI NHÁNH</h4>
+                    <ul>
+                        <li class="row"><a href="">Hà Nội</a></li>
+                        <li class="row"><a href="">TP Hồ Chí Minh</a></li>
+                        <li class="row"><a href="">Đà Nẵng</a></li>
+                        <li class="row"><a href="">Cần Thơ</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4 class="col-title">VỀ CELINA</h4>
+                    <ul>
+                        <li class="row"><a href="">Giới thiệu</a></li>
+                        <li class="row"><a href="">Dịch vụ</a></li>
+                        <li class="row"><a href="">Chính sách bảo mật</a></li>
+                        <li class="row"><a href="">Giảm giá</a></li>
+                        <li class="row"><a href="">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4 class="col-title">THEO DÕI CHÚNG TÔI TRÊN</h4>
+                    <ul>
+                        <li class="row"><a href=""><img src="img/instagram.png" height="15px"/>&nbsp; Instagram</a></li>
+                        <li class="row"><a href=""><img src="img/facebook.png" height="15px"/>&nbsp; Facebook</a></li>
+                        <li class="row"><a href=""><img src="img/twitter.png" height="15px"/>&nbsp; Twitter</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4 class="col-title">BẢN QUYỀN</h4>
+                    <li class="row"> &copy; 2000 Celina Hotel.</li>
+                    <li class="row">Tất cả các quyền được bảo lưu.</li>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
